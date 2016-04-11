@@ -9,7 +9,9 @@
             "email": "michael@hiveempire.com"
         }
     ],
-    "require": {},
+    "require": {
+        "symfony/intl": "^2.8"
+    },
     "autoload": {
         "psr-4": {
             "Finder\\": "src/"
