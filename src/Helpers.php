@@ -31,7 +31,7 @@ class Helpers
             if ( !fmod( $value, 1 ) ) {
                 $decimals = 0;
             }
-            $value = sprintf('$%s', number_format($value, $decimals));
+            $value = sprintf('$%s', number_format( floor( $value * 100) / 100, $decimals ) );
         }
         return $value;
     }
