@@ -25,13 +25,15 @@ class Helpers
         return '';
     }
 
-    public function money($value, $decimals = 0)
-    {
-        if (!is_numeric($value) || !is_numeric($decimals)) {
-            return $value;
+    public function money($value, $decimals = 2)
+    { 
+        if (is_numeric($value) && is_numeric($decimals)) {
+            if ( !fmod( $value, 1 ) ) {
+                $decimals = 0;
+            }
+            $value = sprintf('$%s', number_format($value, $decimals));
         }
-
-        return sprintf('$%s', number_format($value, $decimals));
+        return $value;
     }
 
     public function date($data, $format = 'Y-m-d')
