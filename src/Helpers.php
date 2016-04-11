@@ -36,7 +36,7 @@ class Helpers
         return $value;
     }
 
-    public function date($data, $format = 'Y-m-d')
+    public function date($data, $format = 'Y-m-d H:i:s')
     {
         try {
             $time = new \DateTime($data);

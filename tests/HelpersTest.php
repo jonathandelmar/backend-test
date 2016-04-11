@@ -59,7 +59,7 @@ class HelpersTest extends \PHPUnit_Framework_TestCase
 
     public function testDateOnlyDateNoFormat()
     {
-        $this->assertEquals("2015-04-29 12:00:00", $this->helper->date('2015-04-29'));
+        $this->assertEquals("2015-04-29 00:00:00", $this->helper->date('2015-04-29'));
     }
 
     public function testDateDateFormat()
