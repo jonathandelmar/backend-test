@@ -69,10 +69,28 @@ class Helpers
      * @param int $value
      * @param str $code
      * 
+     * @see https://symfony.com/doc/current/components/intl.html#currencies
      * @return str
      */
     public function currency( $value, $code ) 
     {                
-        return Intl::getCurrencyBundle()->getCurrencySymbol( $code ) . number_format( $value, 2 );
+        return is_numeric($value) ? Intl::getCurrencyBundle()->getCurrencySymbol( $code ) . number_format( $value, 2 ) : $value;
+    }
+    
+    /**
+     * Returns a human-readable concatenated string list
+     * 
+     * @param array $values
+     * 
+     * @return str
+     */
+    public function stringList( $values ) 
+    {                
+        $strResult = '';
+        if ( is_array( $values ) ) {
+            $lastItem = count( $values ) > 1 ? ' and ' . array_pop( $values ) : '';
+            $strResult= implode( ', ', $values ) . $lastItem;
+        }
+        return $strResult;
     }
 }

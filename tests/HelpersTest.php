@@ -104,16 +104,16 @@ class HelpersTest extends \PHPUnit_Framework_TestCase
 
     public function testListOneElement()
     {
-        $this->assertEquals("orange", $this->helper->list(['orange']));
+        $this->assertEquals("orange", $this->helper->stringList(['orange']));
     }
 
     public function testListTwoElements()
     {
-        $this->assertEquals("orange and green", $this->helper->list(['orange', 'green']));
+        $this->assertEquals("orange and green", $this->helper->stringList(['orange', 'green']));
     }
 
     public function testListSeveralElements()
     {
-        $this->assertEquals("orange, red, yellow and green", $this->helper->list(['orange', 'red', 'yellow', 'green']));
+        $this->assertEquals("orange, red, yellow and green", $this->helper->stringList(['orange', 'red', 'yellow', 'green']));
     }
 }
