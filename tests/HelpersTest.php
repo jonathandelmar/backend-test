@@ -74,7 +74,7 @@ class HelpersTest extends \PHPUnit_Framework_TestCase
 
     public function testDateWithTimezone()
     {
-        $this->assertEquals("12:02 29 04 2015", $this->helper->date('2015-04-29 14:02:31', 'h:i d m Y', 'Asia/Manila'));
+        $this->assertEquals("14:02 29 04 2015", $this->helper->date('2015-04-29 14:02:31', 'H:i d m Y', 'Asia/Manila'));
     }
 
     public function testCurrencyFormatterUSD()
