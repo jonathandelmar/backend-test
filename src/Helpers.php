@@ -78,7 +78,12 @@ class Helpers
     }
     
     /**
-     * Returns a human-readable concatenated string list
+     * Returns a human-readable concatenated string list from array.
+     * If input is not an array, return a string with no value.
+     * 
+     * This is refactored from having a "list" method since "list" is a reserved keyword in PHP
+     * @see http://php.net/manual/en/reserved.keywords.php
+     * 
      * 
      * @param array $values
      * 
