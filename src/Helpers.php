@@ -25,7 +25,7 @@ class Helpers
         return '';
     }
 
-    public function money($value, $decimals = 2)
+    public function money($value, $decimals = 0)
     {
         if (!is_numeric($value) || !is_numeric($decimals)) {
             return $value;
