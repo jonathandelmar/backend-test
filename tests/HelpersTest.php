@@ -69,7 +69,7 @@ class HelpersTest extends \PHPUnit_Framework_TestCase
 
     public function testDateDateTimeFormat()
     {
-        $this->assertEquals("14:02 29 04 2015", $this->helper->date('2015-04-29 14:02:31', 'h:i d m Y'));
+        $this->assertEquals("14:02 29 04 2015", $this->helper->date('2015-04-29 14:02:31', 'H:i d m Y'));
     }
 
     public function testDateWithTimezone()
